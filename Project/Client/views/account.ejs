@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <script src="js/global.js"></script>
+        <script src="js/account.js"></script>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/account.css">
+        <link rel="icon" type="image/x-icon" href="/images/titleIcon.png">
+    </head>
+    <body>  
+        <div class="topnav">
+            <a id="navHome" onclick="navigateSite(0, 'home')">Home</a>
+            <a id="navPort" onclick="navigateSite(0, 'portfolio')">Portfolio</a>
+            <a class="active" id="navAcc" onclick="navigateSite(0, 'account')">Your Account</a>
+            <a id="navIndex" onclick="navigateSite(0, 'logout')">Logout</a>
+        </div>
+        &nbsp;
+        <h1 class="tip">Hello, welcome to your account page!</h1>
+        <div class="container">
+            <label class="header" for="username">Email:</label>
+            <p class="data" id="username"><%= account.username %></p>
+            <br>
+            <label class="header" for="firstName">First Name:</label>
+            <p class="data" id="firstName"><%= account.firstname %></p>
+            <br>
+            <label class="header" for="lastName">Last Name:</label>
+            <p class="data" id="lastName"><%= account.lastname %></p>
+            <br>
+            <label class="header" for="dateOfBirth">Date Of Birth:</label>
+            <p class="data" id="dateOfBirth"><%= account.DOB %></p>
+          </div>
+    </body>
+</html>

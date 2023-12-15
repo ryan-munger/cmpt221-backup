@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="js/global.js"></script>
+    <script src="js/portfolio.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="icon" type="image/x-icon" href="/images/titleIcon.png">
+    <title>Portfolio</title>
+</head>
+
+<body onload="init()">
+    <div class="topnav">
+        <a id="navHome" onclick="navigateSite(0, 'home')">Home</a>
+        <a class="active" id="navPort" onclick="navigateSite(0, 'portfolio')">Portfolio</a>
+        <a id="navAcc" onclick="navigateSite(0, 'account')">Your Account</a>
+        <a id="navIndex" onclick="navigateSite(0, 'logout')">Logout</a>
+    </div>
+
+    <!-- <p class="tipMessage">Current rankings (Metric: Score).</p> -->
+    &nbsp;
+    <div id="portfolioTable">
+        <!-- Table generated in portfolio.js -->
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-container">
+        <p class = form-header>Market</p>
+        <form id="MarketForm">
+            <label for="cryptocurrency">Cryptocurrency Symbol:</label>
+            <input type="text" id="cryptocurrency" name="cryptocurrency" required>
+            <br>
+            <br>
+            <label for="amountInput">Amount:</label>
+            <input type="text" id="amountInput" name="amount" required>
+            <br>
+            <br>
+            <select id="buy/sell" name="buy/sell" required>
+                <option value="buy">Buy</option>
+                <option value="sell">Sell</option>
+            </select>
+            <br>
+            <br>
+            <button class="yellow-button" type="button" onclick="buyOrSellCoin()">Submit</button>
+            <button class="yellow-button" type="button" onclick="clearForm()">Cancel</button>
+        </form>
+    </div>
+    <br>
+    <p>&nbsp;</p>
+    <p2 id="elementToFade" onclick="navigateSite(0, 'home')">Press the spacebar or click here to return to the homepage
+    </p2>
+    <br>
+
+    <div2>
+        <!-- Table generated in portfolio.js -->
+    </div2>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <script src="js/global.js"></script>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/account.css">
+        <link rel="icon" type="image/x-icon" href="/images/titleIcon.png">
+    </head>
+    <body>  
+        <div class="topnav">
+            <a id="navHome" onclick="navigateSite(0, 'home')">Home</a>
+            <a id="navRegister" onclick="navigateSite(0, 'register')">Register</a>
+        </div>
+        &nbsp;
+        <div class="login-container">
+            <h2>Login</h2>
+            <form class="login-form" action="/login" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <div class="error-message">
+            <% if (typeof errorMessage !== 'undefined') { %>
+                <p><%= errorMessage %></p>
+            <% } %>
+            </div>
+        </div>
+    </body>
+</html>

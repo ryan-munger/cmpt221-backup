@@ -1,0 +1,7 @@
+Dear Dr. Arias,
+
+To run my project:
+
+npm install
+node .\Server\models\NewDatabase.js
+node .\Server\crypto.js

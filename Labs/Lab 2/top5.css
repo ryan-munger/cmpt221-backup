@@ -1,0 +1,38 @@
+body {
+    background-color: #2f4f4f;
+    color: white;
+
+}
+
+h1 {
+    font-family: Georgia;
+    font-size: 32;
+    font-weight: 800;
+    font-family: "Times+New+Roman", sans-serif;
+}
+
+li {
+    font-family: Helvetica;
+}
+
+img {
+    padding: 5px;
+}
+
+.show {
+    border: 3px solid red;
+}
+
+
+ul li {
+    color: red;
+    font-family: "Times+New+Roman", sans-serif;
+}
+
+.spotlight {
+    padding: 10px;
+    border: 3px dotted yellow;
+    width: 300px;
+    text-align: center;
+    font-family: "Times+New+Roman", sans-serif;
+}

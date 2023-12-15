@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="js/global.js"></script>
+    <script src="js/home.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" type="image/x-icon" href="/images/titleIcon.png">
+    <title>Home</title>
+</head>
+
+<body onload="init()">
+    <input type="text" id="loggedIn" value="<%= loggedIn %>" hidden>
+    <div class="topnav">
+        <a class="active" id="navHome" onclick="navigateSite(0, 'home')">Home</a>
+        <% if (loggedIn) { %>
+            <a id="navPort" onclick="navigateSite(0, 'portfolio')">Portfolio</a>
+            <a id="navAcc" onclick="navigateSite(0, 'account')">Your Account</a>
+            <a id="navIndex" onclick="navigateSite(0, 'logout')">Logout</a>
+            <% } else { %>
+                <a id="navLogin" onclick="navigateSite(0, 'login')">Login</a>
+                <a id="navRegister" onclick="navigateSite(0, 'register')">Register</a>
+                <% } %>
+    </div>
+
+    <div id="searchModal" class="modal">
+        <div id="modal-content">
+            <h3>Top 3 Search Results:</h3>
+            <div id="data-container"></div>
+            <button onclick="closeSearchModal()">Close Window</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="detailPopup" class="modal">
+        <p id="detailPara"></p>
+        <button onclick="closeModal()">Close Window</button>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="closeModal()"></div>
+    <br>
+    <div id="container">
+        <p1 class="tip">Search for currencies:</p1>
+        <br>
+        <div1 id="searchForm">
+            <!-- Search form here -->
+        </div1>
+    </div>
+    <br>
+    <p class="tipMessage">Click on the column headers to sort the table, click on the rows for more detail.</p>
+    <br>
+    <div1 id="tableDiv">
+        <!-- table here, made in home.js -->
+    </div1>
+</body>
+
+</html>
